@@ -18,6 +18,11 @@ app.use('/students', studentsRouter);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+// Handle error
+app.use((req, res, next) => {
+  res.status(404).send('Page not found');
+});
+
 app.listen(3000, () => {
   console.log('=> Server listening to port 3000');
 });
