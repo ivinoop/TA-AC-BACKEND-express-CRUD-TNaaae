@@ -7,19 +7,34 @@ router.get('/',(req, res) => {
   });
 });
 
+router.get('/new', (req, res) => {
+  res.render('userForm');
+});
+
+router.post('/', (req, res) => {
+  // Capture data
+})
+
 router.get('/:id', (req, res) => {
   let id = req.params.id;
-  if(id !== 'new') {
     res.render('singleUser', {
       singleUser: {
         name: 'Vinoo',
         job: 'Developer'
       }
     });
-  }
-  else if(id === 'new') {
-    res.render('userForm');
-  }
 });
+
+router.get('/:id/edit', (req, res) => {
+  // Edit form
+});
+
+router.put('/:id/', (req, res) => {
+  // Capture data
+});
+
+router.delete('/:id', (req, res) => {
+  // Delete user
+})
 
 module.exports = router;
