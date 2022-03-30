@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single User</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="tac">
+    <h1>User Details</h1>
+  </header>
+  <div class="container">
+    <ul class="user-details">
+        <li>
+          <h2>Name: <%= user.name %></h2>
+          <h3>Email: <%= user.email %></h3>
+          <h4>Age: <%= user.age %></h4>
+          <p>Bio: <%= user.bio %></p>
+          <a href="/users/<%= user._id %>/delete">
+            <button>Delete User</button>
+          </a>
+        </li>
+    </ul>
+  </div>
+</body>
+</html>
