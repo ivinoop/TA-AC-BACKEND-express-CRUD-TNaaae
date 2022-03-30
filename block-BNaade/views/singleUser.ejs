@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users Page</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <h1>Single User Page</h1>
+  <div class="container">
+    <ul class="all-users">
+        <li>
+          <h2>Name: <%= user.name %></h2>
+          <h3>Email: <%= user.email %></h3>
+          <p>User Id: <%= user._id %></p>
+        </li>
+    </ul>
+    <div class="flex jcc aic">
+      <a href="/users/<%= user._id %>/edit">
+        <button class="btn">Edit User Details</button>
+      </a>
+      <a href="/users">
+        <button class="btn">Back to All Users</button>
+      </a>
+      <a href="/users/new">
+        <button class="btn">Add User</button>
+      </a>
+      <a href="/">
+        <button class="btn">Back to Home Page</button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
