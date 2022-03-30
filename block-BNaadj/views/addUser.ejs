@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add User</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="tac">
+    <h1>Add User</h1>
+  </header>
+  <div class="container">
+    <form action="/users" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name">
+      <label for="email">Email</label>
+      <input type="email" name="email">
+      <label for="age">Age</label>
+      <input type="number" name="age">
+      <label for="address">Address</label>
+      <textarea type="text" name="address">
+      </textarea>
+      <label for="bio">Bio</label>
+      <input type="text" name="bio">
+      <label for="hobbies">Hobbies</label>
+      <input type="text" name="hobbies">
+      <input type="submit" value="Update">
+    </form>
+  </div>
+</body>
+</html>

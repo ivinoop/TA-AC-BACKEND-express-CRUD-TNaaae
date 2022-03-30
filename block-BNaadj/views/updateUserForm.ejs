@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single User</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="tac">
+    <h1>Update User Details</h1>
+  </header>
+  <div class="container">
+    <form action="/users/<%= user._id %>" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" value="<%= user.name %>">
+      <label for="email">Email</label>
+      <input type="email" name="email" value="<%= user.email %>">
+      <label for="age">Age</label>
+      <input type="number" name="age" value="<%= user.age %>">
+      <label for="address">Address</label>
+      <textarea type="text" name="address">
+        <%= user.address %>
+      </textarea>
+      <label for="bio">Bio</label>
+      <input type="text" name="bio" value="<%= user.bio %>">
+      <label for="hobbies">Hobbies</label>
+      <input type="text" name="hobbies" value="<%= user.hobbies %>">
+      <input type="submit" value="Update">
+    </form>
+  </div>
+</body>
+</html>
